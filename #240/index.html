@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div body>
+    <div a></div>
+    <div b></div>
+    <div c></div>
+  </div>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    div[body] {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      background: #558C90;
+      padding: 50px 110px;
+      margin: 20vh auto;
+    }
+
+    div[a],
+    div[b] {
+      width: 80px;
+      height: 80px;
+      background: #325853;
+      border-radius: 2.4rem 0 0 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        bottom: 50px;
+        z-index: 300px;
+        display: block;
+        background: #325853;
+        border-radius: 0 0 0 2.4rem;
+      }
+    }
+
+    div[b] {
+      position: absolute;
+      right: 110px;
+      top: 170px;
+      border-radius: 0 0 2.4rem 0;
+
+      &::before {
+        bottom: 120px;
+        border-radius: 0 2.4rem 0 0;
+      }
+    }
+
+    div[c] {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 10px solid #F4DA64;
+      border-left-width: 20px;
+      border-right-width: 20px;
+      box-sizing: content-box;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #325853;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        box-shadow:
+          20px 20px #325853,
+          -20px -20px #325853,
+          20px -20px #325853,
+          -20px 20px #325853,
+          0px 35px #558C90,
+          0px -35px #558C90;
+      }
+    }
+  </style>
+</body>
+
+</html>
