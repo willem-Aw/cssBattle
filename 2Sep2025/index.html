@@ -1,0 +1,67 @@
+<body>
+  <div body>
+    <div class="line1"></div>
+    <div vert></div>
+    <div class="line2"></div>
+  </div>
+</body>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: 0;
+  }
+
+  body {
+    background: #5DBCF9;
+    width: 400px;
+    height: 300px;
+    display: grid;
+    place-content:center;
+    margin: 20vh auto;
+
+    div {
+      &[body] {
+        width: 280px;
+        height: 180px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      &:is([vert]) {
+        width: 50px;
+        height: 100%;
+        background: #FFFFCD;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:is(.line1, .line2) {
+        position: absolute;
+        border-color: #FFFFCD;
+        border-style: solid;
+        height: 140px;
+        width: 140px;
+        border-radius: 50vw 0 0 0;
+        border-width: 50px 0 0 50px;
+        transform-origin: bottom left;
+        transform: rotate(-46deg);
+        top: 37px;
+        left: 58px;
+      }
+
+      &:is(.line2) {
+        border-width: 0 50px 50px 0;
+        border-radius: 0 0 50vw 0;
+        transform-origin: bottom right;
+        transform: rotate(-50deg);
+        right: -79px;
+        left: initial;
+        top: -120px;
+      }
+    }
+  }
+</style>
