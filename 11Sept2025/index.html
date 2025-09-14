@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div body>
+    <div>
+      <p></p>
+    </div>
+  </div>
+  <style>
+    div[body] {
+      width: 400px;
+      height: 300px;
+      background: #23384B;
+      padding: 80px 90px;
+      box-sizing: border-box;
+      margin: 20ch auto;
+
+      div {
+        position: relative;
+        display: block;
+        border: 20px solid #F0CD48;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        border-radius: 40px 40px 0 0;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15px;
+          left: -15px;
+          rotate: -39deg;
+          width: 40px;
+          height: 40px;
+          display: block;
+          border: 15px solid #23384B;
+          border-top-color: rgb(35, 56, 75);
+          border-right-color: rgb(35, 56, 75);
+          border-bottom-color: rgb(35, 56, 75);
+          border-left-color: rgb(35, 56, 75);
+          border-color: transparent #F0CD48 transparent transparent;
+          border-radius: 0 50% 50% 0;
+          z-index: 5;
+        }
+
+        &::before {
+          left: 125px;
+          border-color: #F0CD48 transparent transparent transparent;
+          border-radius: 50% 50% 0 0;
+        }
+
+        p {
+          position: absolute;
+          top: -20px;
+          left: 50%;
+          translate: -50% 0;
+          width: 55%;
+          height: 110px;
+          background:
+            linear-gradient(90deg, #23384B) 50% 0% / 60% 54% no-repeat,
+            linear-gradient(90deg, #F0CD48) 0% 0% / 100% no-repeat;
+          margin: 0;
+          z-index: 2;
+          border-radius: 0 0 7rem 7rem;
+
+          &::after,
+          &::before {
+            content: "";
+            position: absolute;
+            top: -26px;
+            left: -86px;
+            rotate: -50deg;
+            width: 80px;
+            height: 80px;
+            display: block;
+            border: 26px solid #23384B;
+            border-color: transparent #23384B transparent transparent;
+            border-radius: 0 50% 50% 0;
+          }
+
+          &::before {
+            border-color: #23384B transparent transparent transparent;
+            border-radius: 50% 50% 0 0;
+            left: 53px;
+          }
+        }
+      }
+    }
+  </style>
+</body>
+
+</html>

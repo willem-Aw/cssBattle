@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <p a></p>
+    <p b></p>
+    <p c></p>
+    <p d></p>
+  </div>
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+
+      div {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background:
+          linear-gradient(90deg, #3E5AA9) 110px 50% / 45% 20px no-repeat,
+          linear-gradient(90deg, #B0C1F0) 0% 0% / 100% 100% no-repeat;
+        box-sizing: border-box;
+        margin: 0;
+        margin: 20vh auto;
+      }
+
+      p {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        width: 100px;
+        height: 100px;
+        background: #3E5AA9;
+        display: block;
+        margin: 0;
+        left: 18px;
+        clip-path: polygon(90% 0%, 40% 50%, 90% 100%, 49% 100%, -1% 50%, 48% 0%);
+      }
+
+      p[b] {
+        left: 74px;
+      }
+
+      p[d],
+      p[c] {
+        right: 17px;
+        left: initial;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 110%, 60% 50%, 10% 0%);
+      }
+
+      p[c] {
+        right: 72px;
+      }
+    }
+  </style>
+</body>
+
+</html>
