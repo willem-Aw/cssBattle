@@ -1,0 +1,82 @@
+<div main>
+    <div top></div>
+    <div aside></div>
+    <div rightTop></div>
+    <div rightCenter></div>
+    <div rightBottom></div>
+    <div bottom></div>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+
+        div[main] {
+            display: grid;
+            width: 400px;
+            height: 300px;
+            background: #FDFFE9;
+            padding: 20px;
+            margin: 20vh auto;
+            grid-template-columns: 80px 1fr;
+            grid-template-rows:
+                auto auto auto auto auto;
+            grid-template-areas:
+                "top top"
+                "aside rightTop"
+                "aside rightCenter"
+                "aside rightBottom"
+                "bottom bottom";
+            gap: 10px;
+
+            div[top] {
+                grid-area: top;
+                height: 30px;
+                background:
+                    linear-gradient(90deg, #555A2A, #555A2A) calc(100% - 5px) 50% / 20px 20px no-repeat,
+                    linear-gradient(90deg, #555A2A, #555A2A) 5px 50% / 20px 20px no-repeat,
+                    linear-gradient(90deg, #ADB274, #ADB274) 50% 50% / 100% 100% no-repeat;
+            }
+
+            div[aside] {
+                grid-area: aside;
+                background: #a9ab71;
+                height: 180px;
+            }
+
+            div[rightTop] {
+                grid-area: rightTop;
+                background: #a9ab71;
+                height: 40px;
+            }
+
+            div[rightCenter] {
+                grid-area: rightCenter;
+                background: #a9ab71;
+                height: 60px;
+            }
+
+            div[rightBottom] {
+                grid-area: rightBottom;
+                background: #a9ab71;
+                height: 60px;
+            }
+
+            div[bottom] {
+                grid-area: bottom;
+                height: 30px;
+                background:
+                    linear-gradient(90deg, #555A2A, #555A2A) calc(50% - 30px) 50% / 20px 20px no-repeat,
+                    linear-gradient(90deg, #555A2A, #555A2A) calc(50% + 30px) 50% / 20px 20px no-repeat,
+                    linear-gradient(90deg, #555A2A, #555A2A) 50% 50% / 20px 20px no-repeat,
+                    linear-gradient(90deg, #ADB274, #ADB274) 50% 50% / 100% 100% no-repeat;
+            }
+        }
+    }
+</style>
