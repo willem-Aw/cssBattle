@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p></p>
+        <p></p>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+            div {
+                width: 400px;
+                height: 300px;
+                background: #00D47E;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin: 20vh auto;
+
+                p {
+                    --box-width: 40px;
+
+                    width: 100%;
+                    height: calc(var(--box-width)*2);
+
+                    background:
+                        linear-gradient(90deg, #23384B, #23384B) 0% 0% / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) var(--box-width) var(--box-width) / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) calc(var(--box-width) * 2) 0% / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) calc(var(--box-width) * 3) var(--box-width) / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) calc(var(--box-width) * 4) 0 / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) calc(var(--box-width) * 5) var(--box-width) / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) calc(var(--box-width) * 6) 0 / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) calc(var(--box-width) * 7) var(--box-width) / var(--box-width) 50% no-repeat,
+                        linear-gradient(90deg, #23384B, #23384B) calc(var(--box-width) * 8) 0 / var(--box-width) 50% no-repeat;
+
+                    &:last-child {
+                        rotate: 180deg;
+                    }
+                }
+            }
+        }
+    </style>
+</body>
+
+</html>
