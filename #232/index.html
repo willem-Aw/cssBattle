@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p h></p>
+            <p w></p>
+            <p l></p>
+        </div>
+    </div>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            &>div {
+                width: 400px;
+                height: 300px;
+                background: #FDFFE9;
+                display: grid;
+                place-items: center;
+                margin: 20vh auto;
+
+                &>div {
+                    position: relative;
+                    width: 140px;
+                    height: 200px;
+                    background:
+                        linear-gradient(90deg, #01385E) 50px 40px / 40px 70px no-repeat,
+                        linear-gradient(90deg, #01385E) 20px 60px / 20px 55px no-repeat;
+
+                    p[w] {
+                        position: absolute;
+                        inset: auto auto 0 0;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100vw;
+                        background: #01385E;
+                        z-index: 2;
+                        box-shadow: inset 0 0 0px 20px #01385E, inset 0 0 0px 40px #81CAFE, inset 0 0 0px 80px #01385E;
+                    }
+
+                    p[l] {
+                        position: absolute;
+                        inset: auto 0 20px auto;
+                        width: 70px;
+                        height: 80px;
+                        background: transparent;
+                        border: 20px solid #01385E;
+                        border-left: none;
+                        border-radius: 0 2.5rem 0 0;
+                        z-index: 1;
+                    }
+
+                    p[h] {
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        background: #01385E;
+                        border-radius: 100vw;
+                        inset: 0 0 auto 50px;
+                    }
+                }
+            }
+        }
+    </style>
+</body>
+
+</html>
