@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <div a></div>
+        <div b></div>
+        <div c></div>
+    </div>
+    <style>
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .body {
+            width: 400px;
+            height: 300px;
+            margin: 20ch auto;
+            display: grid;
+            place-items: center;
+            justify-content: center;
+            grid-template-columns: 90px 120px 90px;
+            background: #EA9A52;
+            gap: 15px;
+
+
+            div {
+                position: relative;
+                width: 120px;
+                height: 120px;
+
+                &[b] {
+                    background: #FFFFFF;
+                }
+
+                &::before,
+                &[b]::after {
+                    content: "";
+                    height: 90px;
+                    width: 90px;
+                    position: absolute;
+                    inset: auto auto 0;
+                    border: 60px solid transparent;
+                    border-block-width: 78px 45px;
+                    border-bottom-color: #6255AA;
+                    box-sizing: border-box;
+                }
+
+                &::before {
+                    inset: 0 auto auto;
+                    rotate: -180deg;
+                }
+
+                &[a]::before,
+                &[c]::before {
+                    width: 120px;
+                    height: 120px;
+                    rotate: -90deg;
+                    inset: -19px 19px auto auto;
+                    border-block-width: 78px 80px;
+                }
+
+                &[c]::before {
+                    rotate: 90deg;
+                    inset: -19px -19px auto auto;
+                }
+            }
+        }
+    </style>
+</body>
+
+</html>
