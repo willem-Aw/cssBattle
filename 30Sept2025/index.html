@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <p c></p>
+        <p d></p>
+    </div>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .body {
+            position: relative;
+            margin-inline: auto;
+            margin-block: 20ch;
+            width: 400px;
+            height: 300px;
+            padding: 30px 60px;
+            background: #9382E4;
+            box-sizing: border-box;
+        }
+
+        p[c] {
+            width: 98px;
+            height: 60px;
+            margin: 0;
+            background: transparent;
+            border: 28px solid #B6EBE7;
+            border-top-width: 0;
+            border-right-width: 0;
+            box-sizing: border-box;
+            box-shadow: 98px 32px #9382E4, 70px 60px #B6EBE7, 168px 92px #9382E4, 140px 120px #B6EBE7, 238px 152px #9382E4, 210px 180px #B6EBE7;
+        }
+
+        p[d] {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            background: #3F595E;
+            inset: 46px auto auto 130px;
+            box-shadow: 70px 60px #3F595E,
+                140px 120px #3F595E,
+                210px 180px #9382E4;
+        }
+    </style>
+</body>
+
+</html>
