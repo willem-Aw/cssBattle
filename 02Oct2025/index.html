@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <p a></p>
+        <p b></p>
+        <p c></p>
+    </div>
+    <style>
+        .body {
+            position: relative;
+            margin: 0;
+            display: grid;
+            align-items: end;
+            width: 400px;
+            height: 300px;
+            grid-template-columns: 100px 140px 100px;
+            gap: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            background: #FEF6E2;
+            margin-inline: auto;
+            margin-block: 20ch;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 220px;
+                height: 150px;
+                background: #ED736E;
+                inset: 30px 90px auto;
+                z-index: 1;
+                border-radius: 28vw 28vw 0 0;
+            }
+        }
+
+        p {
+            margin: 0;
+            display: block;
+            position: relative;
+            z-index: 3;
+        }
+
+        p[a],
+        p[c] {
+            height: 130px;
+            background: #ED736E;
+            border-radius: 82px 0 70px 70px;
+        }
+
+        p[c] {
+            border-radius: 0 82px 70px 70px;
+        }
+
+        p[b] {
+            height: 200px;
+            background: #FEF6E2;
+            border-radius: 23vw;
+
+            &::before,
+            &::after {
+                content: "";
+                width: 15px;
+                height: 29px;
+                border-radius: 50%;
+                background: #ED736E;
+                position: absolute;
+                inset: 66px auto auto 33px;
+            }
+
+            &::after {
+                inset: 66px 32px auto auto;
+            }
+        }
+    </style>
+</body>
+
+</html>
