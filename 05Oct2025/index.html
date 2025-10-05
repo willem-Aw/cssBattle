@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <div>
+            <p t><a v></a><a h></a></p>
+            <p c></p>
+        </div>
+    </div>
+    <style>
+        .body {
+            margin: 0;
+            height: 300px;
+            width: 400px;
+            background: #AC5353;
+            display: grid;
+            place-content: end center;
+            box-sizing: border-box;
+            padding: 20px;
+            box-shadow: 0 0 15px 2px #0000000a;
+            margin: 20ch auto;
+        }
+
+        div {
+            width: 180px;
+            height: 260px;
+            display: grid;
+            grid-template-rows: 80px 180px;
+        }
+
+        p {
+            position: relative;
+            margin: 0;
+        }
+
+        p[c] {
+            width: 180px;
+            height: 180px;
+            background: #222222;
+            border-radius: 50%;
+        }
+
+        a {
+            position: absolute;
+            inset: 55% 0 0 50%;
+            display: block;
+            width: 80px;
+            height: 10px;
+            background: #222222;
+            translate: -50% -50%;
+
+            &::before {
+                content: "";
+                inset: -25px 0 0 -50px;
+                width: 60px;
+                height: 60px;
+                background: #222222;
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            &[v] {
+                rotate: 90deg;
+
+                &::before {
+                    inset: -5px 0 0 -4px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &[h] {
+                top: 62%;
+
+                &::before {
+                    box-shadow: 120px 0 0 #222222;
+                }
+            }
+        }
+    </style>
+</body>
+
+</html>
