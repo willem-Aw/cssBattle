@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <div v></div>
+        <div></div>
+        <div v></div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .body {
+            width: 400px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: #556D7F;
+            margin: 20ch auto;
+        }
+
+        div:not(.body) {
+            width: 100px;
+            height: 270px;
+            background: linear-gradient(90deg, #EBCB58, #EBCB58) 0% 0% / 100% 56% no-repeat, radial-gradient(circle at 50% 50%, #EBCB58 35%, transparent 30%) no-repeat;
+            background-position: center 20px, center 65px;
+
+            &[v] {
+                rotate: 180deg;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
