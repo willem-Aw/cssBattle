@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="body">
+        <div></div>
+        <div v></div>
+    </section>
+    <style>
+        .body {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background: #FFF8EA;
+            margin: 20ch auto;
+        }
+
+        div {
+            position: absolute;
+            width: 120px;
+            height: 50px;
+            background: #DA6C8E;
+            inset: 90px 0 0 70px;
+            border-radius: 2rem;
+            box-shadow: 140px 70px #DA6C8E;
+
+            &[v] {
+                rotate: 90deg;
+                background: #81D2B0;
+                inset: 55px 0 0 175px;
+                box-shadow: 140px 70px #81D2B0;
+            }
+        }
+    </style>
+</body>
+
+</html>
