@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div a></div>
+    <style>
+        body {
+            margin: 20vh 0;
+        }
+
+        div {
+            box-sizing: border-box;
+
+            &[a] {
+                width: 400px;
+                height: 300px;
+                margin: auto;
+                background: radial-gradient(circle at 50% 50%, #6BCF87 16%, transparent 16%) no-repeat, radial-gradient(circle at 50% 50%, #294C0E 24%, transparent 24%) no-repeat, radial-gradient(circle at 50% 50%, #6BCF87 36%, transparent 36%) no-repeat, radial-gradient(circle at 50% 50%, #294C0E 44%, transparent 44%) no-repeat, linear-gradient(90deg, #6BCF87) no-repeat;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    box-sizing: border-box;
+                    position: absolute;
+                    inset: 40px 0 0 90px;
+                    width: 220px;
+                    height: 110px;
+                    border-radius: 100vw;
+                    background-color: #294C0E;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+    </style>
+
+
+</body>
+
+</html>
